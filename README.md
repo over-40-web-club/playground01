@@ -1,0 +1,91 @@
+# fictitious-site-for-practice
+# みんなで架空サイトを作ってみよう
+
+# 開発の流れ
+
+Githubで管理するリポジトリでは、以下の流れでコードを更新します。
+
+* まずはmasterブランチからはじめる
+    * ローカルリポジトリで`master`ブランチに入る
+    * リモートリポジトリで`master`ブランチの更新があるか確認する
+* featureブランチで開発
+    * featureブランチを切る
+    * 開発する
+    * 変更点をローカルリポジトリで`commit`する
+* レビュー
+    * リモートリポジトリへ`push`する
+    * Pull Requestを出す
+    * PRでレビューをしてもらう
+* 最後にmasterブランチへmerge
+    * PRのレビューが終了したら、`master`ブランチへ`merge`する
+
+---------
+## まずは、コードをローカルにコピーするのに次のコマンドを実行します。
+
+```
+git clone https://github.com/over-40-web-club/fictitious-site-for-practice.git
+```
+
+# 開発
+---------
+## ローカルリポジトリでmasterブランチに入る
+次のコマンドで、自分がいるブランチを確認しましょう。
+```
+git branch
+```
+
+masterブランチにいなかったら、masterに戻ります。
+```
+git checkout master
+```
+
+## リモートリポジトリでmasterブランチの更新があるか確認する
+誰か更新をしていないか確認するために以下のコマンドを実行します。
+```
+git pull
+```
+
+# featureブランチで開発
+
+masterブランチでは、追加や変更をしないようにしましょう。
+**チーム開発の練習なので、一行でもなにかコードを書こうと思ったら、featureブランチという開発用ブランチで作業します。**
+
+## featureブランチを切る
+
+```
+git checkout -b feature/new-branch
+```
+＊「feature/new-branch」の「new-branch」には変更内容がわかるような名前をつけます。
+
+## 変更した内容をコミットする
+
+```
+git add .
+git commit -m "(例)[add]画像を追加"
+```
+- git add 「.」には変更したファイル名を入力します。「.」は変更全部という意味です。
+- ""は全角を使用しないように注意しましょう。
+おかしくなってしまったら、「control+C」で内容を廃棄できます。慌てないでやり直してみましょう。
+- 識別子にまずは、[add], [update], [fix], [remove]（追加・更新・修正・削除）を使ってみましょう。
+
+
+----
+# レビュー
+
+## リモートリポジトリへpushする
+
+```
+git push origin feature/new-branch
+```
+
+Githubのリモートリポジトリへ、ローカルリポジトリの変更を反映させます。
+これでPRを出したり、他の人があなたの更新したコードを見えるようになります。
+
+## Pull Requestを出す
+Github上のリポジトリページに移動します。
+pushしたブランチのPull Request (PR)を出せるようになっています。
+画面右の[Compare & pull request]を押します。
+
+
+
+参考にしたサイト：**[Githubでチーム開発するためのマニュアル](https://qiita.com/siida36/items/880d92559af9bd245c34)**とします。
