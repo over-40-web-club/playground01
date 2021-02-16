@@ -1,4 +1,3 @@
-# fictitious-site-for-practice
 # みんなで架空サイトを作ってみよう
 
 # 開発の流れ
@@ -23,7 +22,7 @@ Githubで管理するリポジトリでは、以下の流れでコードを更�
 ## まずは、コードをローカルにコピーするのに次のコマンドを実行します。
 
 ```
-git clone https://github.com/over-40-web-club/fictitious-site-for-practice.git
+git clone https://github.com/over-40-web-club/playground01.git
 ```
 
 # 開発
