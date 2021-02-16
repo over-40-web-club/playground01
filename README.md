@@ -72,10 +72,10 @@ git commit -m "(例)[add]画像を追加"
 # レビュー
 
 ## リモートリポジトリへpushする
+```
+git push --set-upstream origin feature/new-branch
+```
 
-```
-git push origin feature/new-branch
-```
 
 Githubのリモートリポジトリへ、ローカルリポジトリの変更を反映させます。
 これでPRを出したり、他の人があなたの更新したコードを見えるようになります。
