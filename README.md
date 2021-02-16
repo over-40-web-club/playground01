@@ -87,4 +87,4 @@ pushしたブランチのPull Request (PR)を出せるようになっていま�
 
 
 
-参考にしたサイト：**[Githubでチーム開発するためのマニュアル](https://qiita.com/siida36/items/880d92559af9bd245c34)**とします。
+参考にしたサイト：[Githubでチーム開発するためのマニュアル](https://qiita.com/siida36/items/880d92559af9bd245c34)
