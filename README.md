@@ -1,5 +1,31 @@
 # みんなで架空サイトを作ってみよう
 
+# はじめてGitHubに接続するとき
+
+## SSH接続の方法~GitHubへの登録は済んでいる状態で
+1. 公開鍵・秘密鍵の作成(ターミナル・シェルでの操作)
+   1. 鍵を入れるフォルダに移動
+	 `cd ~/.ssh`
+	 2. 鍵作成
+	 `ssh-keygen -t rsa`
+	 - パラフレーズ設定するかなど聞かれますが、とりあえず、すべてそのままエンターですすみます。なれてきたら、色々調べてみましょう。
+	 - 次の2つのファイルが生成されます。
+  	 - id_rsa				-> 秘密鍵
+  	 - id_rsa.pub 	-> 公開鍵
+2. 公開鍵をGitHubにアップする
+   1. 鍵のコピー（ターミナル・シェルで操作）
+   - `pbcopy < ~/.ssh/id_rsa.pub` (Mac)
+	 - `clip < ~/.ssh/id_rsa.pub' (Windows)
+*鍵の名前は自分の作成したもの。
+   2. 設定に移動　　[こちら](https://github.com/settings/ssh)
+   3. `New SSH Key` をクリック
+   4. Titleには任意の名前（孫は空白のまましていた。勝手につけてくれる）　Keyにさきほどクリップボードにコピーしたものをはりつける
+   5. `Add SSH Key`をクリック
+1. 接続をたしかめる
+   1. `ssh -T git@github.com`
+   2. `Hi sonho463! You've successfully authenticated, but GitHub does not provide shell access.` ->　こんなのがかえってくればOK
+
+
 # 開発の流れ
 
 Githubで管理するリポジトリでは、以下の流れでコードを更新します。
